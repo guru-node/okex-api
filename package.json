@@ -1,6 +1,6 @@
 {
-  "name": "okex-api",
-  "version": "0.11.3",
+  "name": "@guru-node/okex-api",
+  "version": "0.11.5",
   "description": "okex api for both node & frontend",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/talrasha007/okex-api.git"
+    "url": "git+git@github.com:guru-node/okex-api.git"
   },
   "keywords": [
     "okex",
@@ -17,9 +17,9 @@
   "author": "Tal",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/talrasha007/okex-api/issues"
+    "url": "https://github.com:guru-node/okex-api/issues"
   },
-  "homepage": "https://github.com/talrasha007/okex-api#readme",
+  "homepage": "https://github.com:guru-node/okex-api#readme",
   "dependencies": {
     "async-ws": "0.1.1",
     "axios": "^0.21.1",

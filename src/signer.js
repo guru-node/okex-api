@@ -13,7 +13,7 @@ class Signer {
     const ts = this._tsFormat === 'v3' ? Date.now() / 1000 : new Date().toISOString();
     return [
       ts,
-      hmac.update(`${ts}${method}${path}${params && JSON.stringify(params)}`).digest('base64')
+      hmac.update(`${ts}${method}${path}${(params && JSON.stringify(params) || "")}`).digest('base64')
     ];
   }
 }

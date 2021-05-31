@@ -68,8 +68,9 @@ class HttpApi {
   }
 
   async get(path, params) {
-    if (params) {
-      for (const key of Object.keys(params || {})) {
+    const keys = Object.keys(params || {});
+    if (keys.length) {
+      for (const key of keys) {
         if (params[key] === null || params[key] === undefined) delete params[key];
       }
 
@@ -87,7 +88,7 @@ class HttpApi {
 
   async post(path, body) {
     const headers = {
-      ...this.getSignedHeader('POST', path, body),
+      ...this.getSignedHeader('POST', path, JSON.parse(JSON.stringify(body))),
       'Content-Type': 'application/json'
     };
 
